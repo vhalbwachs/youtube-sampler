@@ -147,8 +147,8 @@ setTimeout(function() {
           <td>Remove</td>
         </tr>
         <tr ng-repeat="trigger in triggers track by $index">
-          <td style="padding-right: 2px">{{::trigger.keycode | tokeyboard}}</td>
-          <td>{{::trigger.position}}</td>
+          <td style="padding-right: 2px">{{trigger.keycode | tokeyboard}}</td>
+          <td>{{trigger.position}}</td>
           <td ng-click="deleteTrigger($index)">[delete]</td>
         </tr>
         </table>
