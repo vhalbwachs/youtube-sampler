@@ -77,6 +77,10 @@ setTimeout(function() {
             position: scope.triggerPosition
           });
         }
+
+        scope.deleteTrigger = function(index) {
+          scope.triggers.slice(index, 1);
+        }
         //init
         scope.currentPlayerPosition = video.currentTime.toFixed(2);
       },
@@ -141,9 +145,10 @@ setTimeout(function() {
           <td>Trigger</td>
           <td>Position</td>
         </tr>
-        <tr ng-repeat="trigger in triggers">
+        <tr ng-repeat="trigger in triggers trackBy $index">
           <td style="padding-right: 2px">{{::trigger.keycode | tokeyboard}}</td>
           <td>{{::trigger.position}}</td>
+          <td ng-click="deleteTrigger($index)">[delete]</td>
         </tr>
         </table>
         <br />
