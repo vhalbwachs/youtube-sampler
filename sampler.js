@@ -96,9 +96,13 @@ setTimeout(function() {
         #triggerArea:focus {
           background-color: green;
         }
+        youtube-sampler td {
+          padding: 2px;
+        }
         </style>
-          Current Player Position:
-          <div>
+
+          <h3>Current Player Position:</h3>
+          <div style="padding-bottom: 5px">
           <span ng-bind="currentPlayerPosition"
                 style="padding-left: 5px">
           </span>
@@ -106,9 +110,9 @@ setTimeout(function() {
             [Copy to trigger]
           </button>
           </div>
-        <br />
-        <label>
-          New Position:
+
+        <h3>New Trigger:</h3>
+        <div style="padding-bottom: 5px">
           <input ng-model="triggerPosition" 
                  type="number"
                  step="0.01"/>
@@ -137,9 +141,9 @@ setTimeout(function() {
           <button ng-click="testPosition(-0.01)">
           [- 0.01s]
           </button>
-        </label>
-        <br />
-        Current Trigger List:
+        </div>
+        
+        <h3>Current Trigger List:</h3>
         <table>
         <tr>
           <td>Trigger</td>
